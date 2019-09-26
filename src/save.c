@@ -49,7 +49,7 @@ save_file_read_char (SaveFile *f)
 {
   unsigned char c;
 
-  c = gzgetc (f->file);
+  c = gzgetc_ (f->file);
   c ^= 0x55;
   c ^= f->position & 0xFF;
 
